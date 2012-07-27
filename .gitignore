@@ -14,3 +14,6 @@
 /log/*.log
 /tmp
 .DS_Store
+
+# Ignore local env var loader
+config/heroku_env.rb
