@@ -1,2 +1,68 @@
-<h1>Bustimes#buspredictions</h1>
-<p>Find me in app/views/bustimes/buspredictions.html.erb</p>
+require 'nokogiri'
+
+<% @stopname = @buspredictions.first['stpnm'] %>
+
+<div data-role="page" data-theme="b">
+
+	<div data-role="header" data-theme="b">
+		<h2>Upcoming buses</h2>
+	
+		<a href="/" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-transition="pop" data-direction="reverse">Home</a>
+	</div>
+
+	<div data-role="content">
+
+		<a href="javascript:window.location.reload();" data-icon="refresh" data-role="button">Refresh</a>
+
+		<h3><%= @stopname %>, Route <%= params['id']%> <%= params['dir']%></h3>
+
+		<ul data-role="listview" data-inset="true" data-theme="d">
+  		<% @buspredictions.each do |l| %>
+  			<%
+  				timestamp = l['tmstmp'] 
+  				year = timestamp[0,4]
+  				month = timestamp[4,2]
+  				day = timestamp[6,2]
+  				hour = timestamp[9,2]
+  				min = timestamp[12,2]
+  				currenttime = Time.local(year,month,day,hour,min)
+  				
+  				prediction = l['prdtm']
+  				year = prediction[0,4]
+  				month = prediction[4,2]
+  				day = prediction[6,2]
+  				hour = prediction[9,2]
+  				min = prediction[12,2]
+  				predictiontime = Time.local(year,month,day,hour,min)
+  				
+  				timedif = (predictiontime - currenttime)/60
+  			%>
+  			
+    	<li>
+    		<%= timedif.to_int %> Min (to <%= l['des'] %>)
+    		
+    		<ul>
+    			<li>Current Time: <%= currenttime.strftime("%m/%d/%Y %I:%M%p") %> <br />
+    			Arrival Time: <%= predictiontime.strftime("%m/%d/%Y %I:%M%p") %> <br />
+    			<br />
+    			Bus Number: <%= l['vid'] %> <br />
+    			<br />
+	      		<%= l['rt'] %> <%= l['rtdir'] %> to <%= l['des'] %>
+	      		
+	      		<%
+	      			@stpnm = l['stpnm']
+	      		%>
+	      		
+    			</li>
+    		</ul>
+    	</li>
+  		<% end %>
+		</ul>
+		
+	</div>
+
+	<div data-role="footer" data-theme="b">
+		<h4>&#9400;2012, Pennyland Productions.</h4>
+	</div>
+
+</div>

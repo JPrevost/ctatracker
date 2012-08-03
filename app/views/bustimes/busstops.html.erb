@@ -1,2 +1,29 @@
-<h1>Bustimes#busstops</h1>
-<p>Find me in app/views/bustimes/busstops.html.erb</p>
+<div data-role="page" data-theme="b">
+
+	<div data-role="header" data-theme="b">
+		<h2>Choose a stop</h2>
+
+		<a href="/" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-transition="pop" data-direction="reverse">Home</a>
+
+	</div>
+
+	<div data-role="content">
+
+		<ul data-role="listview" data-inset="true" data-filter="true" data-theme="d">
+
+	  	<% @busstops.each do |l| %>
+    	
+	    	<li>
+    			<%= link_to l['stpnm'], '/bustimes/' + params[:id] + '/' + URI::encode(params[:dir]) + '/' + l['stpid'], "data-transition" => "slide" %>
+    		</li>
+    
+		  <% end %>
+		</ul>
+	
+	</div>
+
+	<div data-role="footer" data-theme="b">
+		<h4>&#9400;2012, Pennyland Productions.</h4>
+	</div>
+
+</div>

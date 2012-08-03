@@ -1,11 +1,19 @@
 Ctatracker::Application.routes.draw do
-  get "bustimes/busroutes"
+  
+  root :to => 'bustimes#busroutes'
 
-  get "bustimes/busdirections"
+	match 'bustimes/:id' => 'bustimes#busdirections'
+	match 'bustimes/:id/:dir' => 'bustimes#busstops'
+	match 'bustimes/:id/:dir/:stopid' => 'bustimes#buspredictions'
 
-  get "bustimes/busstops"
 
-  get "bustimes/buspredictions"
+#  get "bustimes/busroutes"
+
+#  get "bustimes/busdirections"
+
+#  get "bustimes/busstops"
+
+#  get "bustimes/buspredictions"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

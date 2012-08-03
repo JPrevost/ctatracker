@@ -1,2 +1,48 @@
-<h1>Bustimes#busroutes</h1>
-<p>Find me in app/views/bustimes/busroutes.html.erb</p>
+<div data-role="page" data-theme="b">
+	
+	<div data-role="header" data-theme="b">
+		<h2>Choose a route</h2>
+	</div>
+
+	<div data-role="content">
+
+		<div class="content-favoriteroutes">
+			<ul data-role="listview" data-inset="true" id="favorites"></ul>
+		</div>
+
+		<div class="content-allroutes">
+			<ul data-role="button" data-theme="d">
+				<a href="/#allroutes" data-transition="flip">Choose a Route</a>
+			</ul>
+		</div>
+	</div>
+
+	<div data-role="footer" data-theme="b">
+		<h4>&#9400;2012, Pennyland Productions.</h4>
+	</div>
+
+</div>
+
+
+<div data-role="page" id="allroutes" data-theme="b">
+
+	<div data-role="header" data-theme="b">
+		<h2>Choose a route</h2>
+	</div>
+
+	<div data-role="content">
+		<div class="content-allroutes">
+		<ul data-role="listview" data-inset="true">
+				<ul data-role="listview" data-filter="true" data-inset="true" data-theme="d">
+					<% @busroutes.each do |l| %>
+		  	  		<li>
+		  	  			<%= link_to l['rt'] + ' ' + l['rtnm'], '/bustimes/' + l['rt'], "data-transition" => "slide" %>
+			   	 	</li>
+			  		<% end %>
+				</ul>
+		</ul>
+	</div>
+	</div>
+
+
+</div>
