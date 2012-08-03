@@ -1,4 +1,5 @@
 class BustimesController < ApplicationController
+
   def busroutes
   	@busroutes = Bustime.new.busroutes
   end
@@ -14,4 +15,5 @@ class BustimesController < ApplicationController
   def buspredictions
   	@buspredictions = Bustime.new.buspredictions(params[:id],params[:dir],params[:stopid])
   end
+
 end

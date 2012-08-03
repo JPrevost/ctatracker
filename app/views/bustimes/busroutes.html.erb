@@ -7,7 +7,7 @@
 	<div data-role="content">
 
 		<div class="content-favoriteroutes">
-			<ul data-role="listview" data-inset="true" id="favorites"></ul>
+			<ul data-role="listview" data-inset="true" id="favorites" data-theme="d"></ul>
 		</div>
 
 		<div class="content-allroutes">
@@ -46,3 +46,29 @@
 
 
 </div>
+
+<script>
+if (Modernizr.localstorage) {
+    
+	var fav = '';
+	// Retrieve objects from storage
+	for (var i = 0; i < localStorage.length; i++){
+    	
+    	fav = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    	    
+    	$('<li><a href="' + fav.path +'">' + fav.rt + ' ' + fav.dir + ' ' + fav.stpnm + '</a><a title="deletestop" href="javascript:deletestop(' + "'" + encodeURI(fav.path) + "'" + ');" data-icon="delete">test</a></li>').appendTo('#favorites');
+	}
+
+	function deletestop(path)
+		{
+			
+			localStorage.removeItem(path);
+			
+			window.location.reload();
+		}
+	
+}
+else {
+    // No local storage
+}
+</script>

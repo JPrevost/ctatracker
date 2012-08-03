@@ -2,6 +2,7 @@ Ctatracker::Application.routes.draw do
   
   root :to => 'bustimes#busroutes'
 
+	match 'bustimes/clearlocalstorage' => 'bustimes#clearlocalstorage'
 	match 'bustimes/:id' => 'bustimes#busdirections'
 	match 'bustimes/:id/:dir' => 'bustimes#busstops'
 	match 'bustimes/:id/:dir/:stopid' => 'bustimes#buspredictions'

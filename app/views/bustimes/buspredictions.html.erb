@@ -66,3 +66,22 @@ require 'nokogiri'
 	</div>
 
 </div>
+
+<script>
+if (Modernizr.localstorage) {
+	var  testObject = { 
+		'rt': <%= params['id']%>,
+		'stpnm': '<%= @stpnm %>',
+		'dir': '<%= params['direction']%>',
+		'stpid': '<%= params['stopid']%>',
+		'path': '<%= request.fullpath %>'
+ 	};
+	
+	// Put the object into storage
+	localStorage.setItem('<%= request.fullpath %>', JSON.stringify(testObject));
+
+}
+else {
+    // no localstorage means no storing of recent stops
+}
+</script>
