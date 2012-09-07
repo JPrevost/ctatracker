@@ -1,4 +1,4 @@
-<div data-role="page" data-theme="b">
+<div id="indexPage" data-role="page" data-theme="b">
 	
 	<div data-role="header" data-theme="b">
 		<h2>Choose a route</h2>
@@ -21,8 +21,43 @@
 		<h4>&#9400;2012, Pennyland Productions.</h4>
 	</div>
 
-</div>
+	<script>
+		
+		function deletestop(path){
+			localStorage.removeItem(path);	
+			window.location.reload();
+			}
+	
+		$("#indexPage").live('pagebeforeshow', function() {
 
+			if (Modernizr.localstorage) {
+				
+				//remove favorites so we can load them in without duplication    
+    		$("#favorites").empty();
+    
+				var fav = '';
+				// Retrieve objects from storage
+
+				for (var i = 0; i < localStorage.length; i++){
+    	
+    			fav = JSON.parse(localStorage.getItem(localStorage.key(i)));
+    	    
+					//todo: clean this up to be more readable    	    
+    			$('<li><a href="' + fav.path +'">' + fav.rt + ' ' + fav.dir + ' ' + fav.stpnm + '</a><a title="deletestop" href="javascript:deletestop(' + "'" + encodeURI(fav.path) + "'" + ');" data-icon="delete">test</a></li>').appendTo('#favorites');
+
+				}
+				
+				$("#favorites").listview('refresh');
+				
+			}
+		else {
+    	// No local storage
+		}
+		
+
+    });
+	</script>
+</div>
 
 <div data-role="page" id="allroutes" data-theme="b">
 
@@ -44,31 +79,4 @@
 	</div>
 	</div>
 
-
 </div>
-
-<script>
-if (Modernizr.localstorage) {
-    
-	var fav = '';
-	// Retrieve objects from storage
-	for (var i = 0; i < localStorage.length; i++){
-    	
-    	fav = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    	    
-    	$('<li><a href="' + fav.path +'">' + fav.rt + ' ' + fav.dir + ' ' + fav.stpnm + '</a><a title="deletestop" href="javascript:deletestop(' + "'" + encodeURI(fav.path) + "'" + ');" data-icon="delete">test</a></li>').appendTo('#favorites');
-	}
-
-	function deletestop(path)
-		{
-			
-			localStorage.removeItem(path);
-			
-			window.location.reload();
-		}
-	
-}
-else {
-    // No local storage
-}
-</script>
