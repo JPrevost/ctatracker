@@ -5,7 +5,7 @@ describe Bustime do
 	it "should have access to the API key" do
 		expect do
 			ENV['CTA_API_KEY'].defined?
-		end.should be_true
+		end.to be_true
 	end
 
 	describe "busroutes" do
