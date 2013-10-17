@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '1.9.3'
 
 gem 'rails', '3.2.14'
 
@@ -6,6 +7,7 @@ gem 'rails', '3.2.14'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'nokogiri'
+gem 'newrelic_rpm'
 
 group :development do
   gem 'sqlite3'
