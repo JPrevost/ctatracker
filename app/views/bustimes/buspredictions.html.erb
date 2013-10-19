@@ -2,112 +2,112 @@
 
 <div data-role="page" data-theme="b">
 
-	<div data-role="header" data-theme="b">
-		<h2>Upcoming buses</h2>
-	
-		<a href="/" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-transition="pop" data-direction="reverse">Home</a>
-	</div>
+  <div data-role="header" data-theme="b">
+    <h2>Upcoming buses</h2>
 
-	<div data-role="content">
+    <a href="/" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-transition="pop" data-direction="reverse">Home</a>
+  </div>
 
-		<a href="javascript:window.location.reload();" data-icon="refresh" data-role="button">Refresh</a>
+  <div data-role="content">
 
-		<h3><%= @stopname %>, Route <%= params['id']%> <%= params['dir']%></h3>
+    <a href="javascript:window.location.reload();" data-icon="refresh" data-role="button">Refresh</a>
 
-		<ul data-role="listview" data-inset="true" data-theme="d">
-  		<% @buspredictions.each do |l| %>
-  			<%
-  				timestamp = l['tmstmp'] 
-  				year = timestamp[0,4]
-  				month = timestamp[4,2]
-  				day = timestamp[6,2]
-  				hour = timestamp[9,2]
-  				min = timestamp[12,2]
-  				currenttime = Time.local(year,month,day,hour,min)
-  				
-  				prediction = l['prdtm']
-  				year = prediction[0,4]
-  				month = prediction[4,2]
-  				day = prediction[6,2]
-  				hour = prediction[9,2]
-  				min = prediction[12,2]
-  				predictiontime = Time.local(year,month,day,hour,min)
-  				
-  				timedif = (predictiontime - currenttime)/60
-  			%>
-  			
-    	<li data-icon="info">
-    		<a href="#pop<%= l['vid'] %>" data-rel="dialog" data-transition="pop"><%= timedif.to_int %> Min (to <%= l['des'] %>)</a>
-    	</li>
-  		<% end %>
-		</ul>
-		
-	</div>
-	
-	<div data-role="footer" data-theme="b">
-		<h4>&#9400;2012, Pennyland Productions.</h4>
-	</div>
+    <h3><%= @stopname %>, Route <%= params['id']%> <%= params['dir']%></h3>
 
-			<script>
-			if (Modernizr.localstorage) {
-		
-				var  busstopObject = { 
-					'rt': <%= params['id']%>,
-					'stpnm': '<%= @stopname %>',
-					'dir': '<%= params['direction']%>',
-					'stpid': '<%= params['stopid']%>',
-					'path': '<%= request.fullpath %>'
- 				};
-	
-			// Put the object into storage
-			localStorage.setItem('<%= request.fullpath %>', JSON.stringify(busstopObject));
+    <ul data-role="listview" data-inset="true" data-theme="d">
+      <% @buspredictions.each do |l| %>
+        <%
+          timestamp = l['tmstmp']
+          year = timestamp[0,4]
+          month = timestamp[4,2]
+          day = timestamp[6,2]
+          hour = timestamp[9,2]
+          min = timestamp[12,2]
+          currenttime = Time.local(year,month,day,hour,min)
 
-			}
-		else {
-  		  // no localstorage means no storing of recent stops
-		}
-	</script>
+          prediction = l['prdtm']
+          year = prediction[0,4]
+          month = prediction[4,2]
+          day = prediction[6,2]
+          hour = prediction[9,2]
+          min = prediction[12,2]
+          predictiontime = Time.local(year,month,day,hour,min)
+
+          timedif = (predictiontime - currenttime)/60
+        %>
+
+      <li data-icon="info">
+        <a href="#pop<%= l['vid'] %>" data-rel="dialog" data-transition="pop"><%= timedif.to_int %> Min (to <%= l['des'] %>)</a>
+      </li>
+      <% end %>
+    </ul>
+
+  </div>
+
+  <div data-role="footer" data-theme="b">
+    <h4>&#9400;2012, Pennyland Productions.</h4>
+  </div>
+
+      <script>
+      if (Modernizr.localstorage) {
+
+        var  busstopObject = {
+          'rt': <%= params['id']%>,
+          'stpnm': '<%= @stopname %>',
+          'dir': '<%= params['direction']%>',
+          'stpid': '<%= params['stopid']%>',
+          'path': '<%= request.fullpath %>'
+        };
+
+      // Put the object into storage
+      localStorage.setItem('<%= request.fullpath %>', JSON.stringify(busstopObject));
+
+      }
+    else {
+        // no localstorage means no storing of recent stops
+    }
+  </script>
 
 </div>
 
 
 <% @buspredictions.each do |l| %>
-	<%
- 		timestamp = l['tmstmp'] 
- 		year = timestamp[0,4]
- 		month = timestamp[4,2]
- 		day = timestamp[6,2]
- 		hour = timestamp[9,2]
- 		min = timestamp[12,2]
- 		currenttime = Time.local(year,month,day,hour,min)
-  				
- 		prediction = l['prdtm']
- 		year = prediction[0,4]
- 		month = prediction[4,2]
- 		day = prediction[6,2]
- 		hour = prediction[9,2]
- 		min = prediction[12,2]
- 		predictiontime = Time.local(year,month,day,hour,min)
-  				
- 		timedif = (predictiontime - currenttime)/60
- 	%>
-  			
-	<div id="pop<%= l['vid'] %>" data-role="page">
-	
-		<div data-role="header" data-theme="e">
-			<h1>Bus <%= l['vid'] %></h1>
-		</div>
-	
-		<div data-role="content">
-			
-			<p><%= l['rt'] %> <%= l['rtdir'] %> to <%= l['des'] %></p>
-			<p><%= timedif.to_int %> Min (to <%= l['des'] %>)</p>
-    	<p>Current Time: <%= currenttime.strftime("%I:%M%p") %></p>
-    	<p>Arrival Time: <%= predictiontime.strftime("%I:%M%p") %></p>
+  <%
+    timestamp = l['tmstmp']
+    year = timestamp[0,4]
+    month = timestamp[4,2]
+    day = timestamp[6,2]
+    hour = timestamp[9,2]
+    min = timestamp[12,2]
+    currenttime = Time.local(year,month,day,hour,min)
 
- 			<p><a href="#" data-rel="back" data-role="button" data-inline="true" data-icon="back">Close</a></p>	
+    prediction = l['prdtm']
+    year = prediction[0,4]
+    month = prediction[4,2]
+    day = prediction[6,2]
+    hour = prediction[9,2]
+    min = prediction[12,2]
+    predictiontime = Time.local(year,month,day,hour,min)
 
-		</div>
-		
-	</div>
+    timedif = (predictiontime - currenttime)/60
+  %>
+
+  <div id="pop<%= l['vid'] %>" data-role="page">
+
+    <div data-role="header" data-theme="e">
+      <h1>Bus <%= l['vid'] %></h1>
+    </div>
+
+    <div data-role="content">
+
+      <p><%= l['rt'] %> <%= l['rtdir'] %> to <%= l['des'] %></p>
+      <p><%= timedif.to_int %> Min (to <%= l['des'] %>)</p>
+      <p>Current Time: <%= currenttime.strftime("%I:%M%p") %></p>
+      <p>Arrival Time: <%= predictiontime.strftime("%I:%M%p") %></p>
+
+      <p><a href="#" data-rel="back" data-role="button" data-inline="true" data-icon="back">Close</a></p>
+
+    </div>
+
+  </div>
 <% end %>

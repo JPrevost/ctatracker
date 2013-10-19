@@ -13,9 +13,6 @@ class Bustime
     allroutes = doc.xpath('//route').map do |i|
       {'rt' => i.xpath('rt').inner_text, 'rtnm' => i.xpath('rtnm').inner_text}
     end
-
-    return allroutes
-
   end
 
   def busdirections(rt)
@@ -25,10 +22,7 @@ class Bustime
 
     directions = doc.xpath('//dir').map do |i|
       {'dir' => i.inner_text }
-      end
-
-    return directions
-
+    end
   end
 
   def busstops(rt,dir)
@@ -39,9 +33,6 @@ class Bustime
     stops = doc.xpath('//stop').map do |i|
       {'stpid' => i.xpath('stpid').inner_text, 'stpnm' => i.xpath('stpnm').inner_text}
     end
-
-    return stops
-
   end
 
   def buspredictions(rt,dir,stpid)
@@ -58,13 +49,10 @@ class Bustime
         'des' => i.xpath('des').inner_text,
         'prdtm' => i.xpath('prdtm').inner_text,
       }
-      end
-
-    return predictions
+    end
   end
 
   def persisted?
     false
-    end
-
+  end
 end
