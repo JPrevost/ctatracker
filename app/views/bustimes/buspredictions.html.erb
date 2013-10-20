@@ -7,11 +7,11 @@
 
 <% @stopname = params['stpnm'] %>
 
-<a href="javascript:window.location.reload();">Refresh</a>
+<a href="javascript:window.location.reload();" class="pull-right">Refresh</a>
 
 <h3><%= @stopname %>, Route <%= params['id']%> <%= params['dir']%></h3>
 
-<ul>
+<ul class="list-group">
   <% @buspredictions.each do |l| %>
     <%
       timestamp = l['tmstmp']
@@ -33,40 +33,16 @@
       timedif = (predictiontime - currenttime)/60
     %>
 
-  <li>
+  <li class="list-group-item">
+    
     <%= timedif.to_int %> Min (to <%= l['des'] %>)
+
+     <a href="#" class="btn btn-sm btn-info" data-toggle="popover" title="" data-content="<%= l['rt'] %> <%= l['rtdir'] %> to <%= l['des'] %> <%= timedif.to_int %> Min (to <%= l['des'] %>) Current Time: <%= currenttime.strftime("%I:%M%p") %> Arrival Time: <%= predictiontime.strftime("%I:%M%p") %>" data-original-title="Bus <%= l['vid'] %>">Click to toggle popover</a>
+
   </li>
   <% end %>
 </ul>
 
-<h3>Details</h3>
-
-<% @buspredictions.each do |l| %>
-  <%
-    timestamp = l['tmstmp']
-    year = timestamp[0,4]
-    month = timestamp[4,2]
-    day = timestamp[6,2]
-    hour = timestamp[9,2]
-    min = timestamp[12,2]
-    currenttime = Time.local(year,month,day,hour,min)
-
-    prediction = l['prdtm']
-    year = prediction[0,4]
-    month = prediction[4,2]
-    day = prediction[6,2]
-    hour = prediction[9,2]
-    min = prediction[12,2]
-    predictiontime = Time.local(year,month,day,hour,min)
-
-    timedif = (predictiontime - currenttime)/60
-  %>
-
-  <h6>Bus <%= l['vid'] %></h6>
-
-  <p><%= l['rt'] %> <%= l['rtdir'] %> to <%= l['des'] %></p>
-  <p><%= timedif.to_int %> Min (to <%= l['des'] %>)</p>
-  <p>Current Time: <%= currenttime.strftime("%I:%M%p") %></p>
-  <p>Arrival Time: <%= predictiontime.strftime("%I:%M%p") %></p>
-
-<% end %>
+<script>
+  $('.btn').popover('show');
+</script>

@@ -4,15 +4,10 @@
   <li class="active">Choose a Stop</li>
 </ol>
 
-<h2>Choose a stop</h2>
-
-<ul>
-
+<ul class="list-group">
   <% @busstops.each do |l| %>
-
-    <li>
+    <li class="list-group-item">
       <%= link_to l['stpnm'], buspredictions_path( params[:id], params[:rtnm], params[:dir], l['stpid'], l['stpnm'] ) %>
     </li>
-
   <% end %>
 </ul>

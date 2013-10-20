@@ -1,9 +1,12 @@
-<h2>Choose a route</h2>
+<ol class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+  <li class="active">Choose a Route</li>
+</ol>
 
-<div class="allroutes">
-  <ul>
-    <% @busroutes.each do |l| %>
-      <li> <%= link_to l['rt'] + ' ' + l['rtnm'], busdirections_path(l['rt'], l['rtnm']) %> </li>
-    <% end %>
-  </ul>
-</div>
+<ul class="list-group">
+  <% @busroutes.each do |l| %>
+    <li class="list-group-item">
+      <%= link_to l['rt'] + ' ' + l['rtnm'], busdirections_path(l['rt'], l['rtnm']) %>
+    </li>
+  <% end %>
+</ul>

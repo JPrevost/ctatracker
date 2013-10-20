@@ -3,11 +3,9 @@
   <li class="active">Choose a Direction</li>
 </ol>
 
-<h2>Choose Direction</h2>
-
-<ul>
+<ul class="list-group">
   <% @busdirections.each do |l| %>
-    <li>
+    <li class="list-group-item">
       <%= link_to l['dir'], busstops_path( params[:id], params[:rtnm], l['dir'] ) %>
     </li>
   <% end %>
