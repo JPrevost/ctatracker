@@ -23,6 +23,8 @@ end
 
 group :test do
   gem 'capybara'
+  gem "vcr", "~> 2.4.0"
+  gem "webmock", "~> 1.10"
 end
 
 # Gems used only for assets and not required

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe "BustimePages" do
+describe "BustimePages", :vcr do
 
   subject { page }
 
