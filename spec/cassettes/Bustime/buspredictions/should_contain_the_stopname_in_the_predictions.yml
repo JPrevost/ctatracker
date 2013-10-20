@@ -18,18 +18,33 @@ http_interactions:
     headers:
       Set-Cookie:
       - ARPT=KIRNNRScl-ctabt-2wb001CKYJO; path=/
-      - JSESSIONID=F52C0F74B84632CBEA14EC5B8B32B07C; Path=/bustime
+      - JSESSIONID=3F8362DCA9472C7142801E670A052E8C; Path=/bustime
       Server:
       - Apache-Coyote/1.1
       Content-Type:
       - text/xml
       Content-Length:
-      - '79'
+      - '1176'
       Date:
-      - Sun, 20 Oct 2013 04:15:40 GMT
+      - Sun, 20 Oct 2013 18:08:18 GMT
     body:
       encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\t\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
+      string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\t\r\n\t\t\t\r\n\t\t\t\t<prd>\r\n\t\t\t\t\t<tmstmp>20131020
+        13:07</tmstmp>\r\n\t\t\t\t\t<typ>A</typ>\r\n\t\t\t\t\t<stpnm>Michigan &amp;
+        Huron</stpnm>\r\n\t\t\t\t\t<stpid>1125</stpid>\r\n\t\t\t\t\t<vid>4194</vid>\r\n\t\t\t\t\t\r\n\t\t\t\t\t
+        \t\t\t\t\t\r\n\t\t\t\t\t<dstp>430</dstp>\r\n\t\t\t\t\t<rt>147</rt>\r\n\t\t\t\t\t<rtdir>Northbound</rtdir>\r\n\t\t
+        \       \t<des>Howard Station</des>\r\n\t\t        \t<prdtm>20131020 13:08</prdtm>\r\n\t\t
+        \       \t\r\n\t\t\t\t</prd>\t\t\t\r\n\t\t\t\r\n\t\t\t\t<prd>\r\n\t\t\t\t\t<tmstmp>20131020
+        13:08</tmstmp>\r\n\t\t\t\t\t<typ>A</typ>\r\n\t\t\t\t\t<stpnm>Michigan &amp;
+        Huron</stpnm>\r\n\t\t\t\t\t<stpid>1125</stpid>\r\n\t\t\t\t\t<vid>4193</vid>\r\n\t\t\t\t\t\r\n\t\t\t\t\t
+        \t\t\t\t\t\r\n\t\t\t\t\t<dstp>3467</dstp>\r\n\t\t\t\t\t<rt>147</rt>\r\n\t\t\t\t\t<rtdir>Northbound</rtdir>\r\n\t\t
+        \       \t<des>Howard Station</des>\r\n\t\t        \t<prdtm>20131020 13:14</prdtm>\r\n\t\t
+        \       \t\r\n\t\t\t\t</prd>\t\t\t\r\n\t\t\t\r\n\t\t\t\t<prd>\r\n\t\t\t\t\t<tmstmp>20131020
+        13:07</tmstmp>\r\n\t\t\t\t\t<typ>A</typ>\r\n\t\t\t\t\t<stpnm>Michigan &amp;
+        Huron</stpnm>\r\n\t\t\t\t\t<stpid>1125</stpid>\r\n\t\t\t\t\t<vid>4156</vid>\r\n\t\t\t\t\t\r\n\t\t\t\t\t
+        \t\t\t\t\t\r\n\t\t\t\t\t<dstp>9000</dstp>\r\n\t\t\t\t\t<rt>147</rt>\r\n\t\t\t\t\t<rtdir>Northbound</rtdir>\r\n\t\t
+        \       \t<des>Howard Station</des>\r\n\t\t        \t<prdtm>20131020 13:25</prdtm>\r\n\t\t
+        \       \t\r\n\t\t\t\t</prd>\t\t\t\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
     http_version: 
-  recorded_at: Sun, 20 Oct 2013 04:15:40 GMT
+  recorded_at: Sun, 20 Oct 2013 18:08:18 GMT
 recorded_with: VCR 2.4.0

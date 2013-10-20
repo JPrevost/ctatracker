@@ -17,8 +17,8 @@ http_interactions:
       message: OK
     headers:
       Set-Cookie:
-      - ARPT=KIRNNRScl-ctabt-2wb001CKYJO; path=/
-      - JSESSIONID=CF5EF9014E381A47607C329608F4E53C; Path=/bustime
+      - ARPT=KIRNNRScl-ctabt-2wb002CKYJQ; path=/
+      - JSESSIONID=D0BB03337477472858C2EC543AEA1391; Path=/bustime
       Server:
       - Apache-Coyote/1.1
       Content-Type:
@@ -26,7 +26,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Sun, 20 Oct 2013 04:15:40 GMT
+      - Sun, 20 Oct 2013 18:08:19 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>1</rt>\r\n\t\t\t\t<rtnm>Bronzeville/Union
@@ -64,7 +64,8 @@ http_interactions:
         Manor Express</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>103</rt>\r\n\t\t\t\t<rtnm>West
         103rd</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>106</rt>\r\n\t\t\t\t<rtnm>East
         103rd</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>108</rt>\r\n\t\t\t\t<rtnm>Halsted/95th</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>111</rt>\r\n\t\t\t\t<rtnm>111th/King
-        Drive</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>112</rt>\r\n\t\t\t\t<rtnm>Vincennes/111th</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>115</rt>\r\n\t\t\t\t<rtnm>Pullman/115th</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>119</rt>\r\n\t\t\t\t<rtnm>Michigan/119th</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>120</rt>\r\n\t\t\t\t<rtnm>Ogilvie/Streeterville
+        Drive</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>111A</rt>\r\n\t\t\t\t<rtnm>Pullman
+        Shuttle</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>112</rt>\r\n\t\t\t\t<rtnm>Vincennes/111th</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>115</rt>\r\n\t\t\t\t<rtnm>Pullman/115th</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>119</rt>\r\n\t\t\t\t<rtnm>Michigan/119th</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>120</rt>\r\n\t\t\t\t<rtnm>Ogilvie/Streeterville
         Express</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>121</rt>\r\n\t\t\t\t<rtnm>Union/Streeterville
         Express</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>124</rt>\r\n\t\t\t\t<rtnm>Navy
         Pier</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>125</rt>\r\n\t\t\t\t<rtnm>Water
@@ -86,7 +87,7 @@ http_interactions:
         of Chicago Hospitals Express</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>201</rt>\r\n\t\t\t\t<rtnm>Central/Ridge</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>205</rt>\r\n\t\t\t\t<rtnm>Chicago/Golf</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>206</rt>\r\n\t\t\t\t<rtnm>Evanston
         Circulator</rtnm>\r\n\t\t\t</route>\t\t\r\n\t\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
     http_version: 
-  recorded_at: Sun, 20 Oct 2013 04:15:41 GMT
+  recorded_at: Sun, 20 Oct 2013 18:08:20 GMT
 - request:
     method: get
     uri: http://www.ctabustracker.com/bustime/api/v1/getdirections?key=YOUR_CTA_API_KEY&rt=147
@@ -104,8 +105,8 @@ http_interactions:
       message: OK
     headers:
       Set-Cookie:
-      - ARPT=KIRNNRScl-ctabt-2wb002CKYJQ; path=/
-      - JSESSIONID=20F522AD69BA681F86A086A962C3D329; Path=/bustime
+      - ARPT=KIRNNRScl-ctabt-2wb001CKYJO; path=/
+      - JSESSIONID=CB75A5DDA2E8D0E54C7F8B1EDC150BD4; Path=/bustime
       Server:
       - Apache-Coyote/1.1
       Content-Type:
@@ -113,12 +114,12 @@ http_interactions:
       Content-Length:
       - '142'
       Date:
-      - Sun, 20 Oct 2013 04:15:41 GMT
+      - Sun, 20 Oct 2013 18:08:19 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\r\n\t\t\t\t\r\n\t\t\t<dir>Northbound</dir>\r\n\t\t\t\t\r\n\t\t\t<dir>Southbound</dir>\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
     http_version: 
-  recorded_at: Sun, 20 Oct 2013 04:15:41 GMT
+  recorded_at: Sun, 20 Oct 2013 18:08:20 GMT
 - request:
     method: get
     uri: http://www.ctabustracker.com/bustime/api/v1/getstops?dir=Northbound&key=YOUR_CTA_API_KEY&rt=147
@@ -137,7 +138,7 @@ http_interactions:
     headers:
       Set-Cookie:
       - ARPT=KIRNNRScl-ctabt-2wb001CKYJO; path=/
-      - JSESSIONID=0FA21E11164933285F02BE373FCDA05F; Path=/bustime
+      - JSESSIONID=2936137DBAFE3B59B509E05AE021C224; Path=/bustime
       Server:
       - Apache-Coyote/1.1
       Content-Type:
@@ -145,7 +146,7 @@ http_interactions:
       Content-Length:
       - '7858'
       Date:
-      - Sun, 20 Oct 2013 04:15:40 GMT
+      - Sun, 20 Oct 2013 18:08:19 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>4725</stpid>\r\n\t\t\t<stpnm>Congress
@@ -199,7 +200,7 @@ http_interactions:
         &amp; Van Buren</stpnm>\r\n\t\t\t<lat>41.876870711802</lat>\r\n\t\t\t<lon>-87.627607584</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>449</stpid>\r\n\t\t\t<stpnm>Washington
         &amp; Wabash</stpnm>\r\n\t\t\t<lat>41.883185299824</lat>\r\n\t\t\t<lon>-87.625976800919</lon>\r\n\t\t\t</stop>\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
     http_version: 
-  recorded_at: Sun, 20 Oct 2013 04:15:41 GMT
+  recorded_at: Sun, 20 Oct 2013 18:08:20 GMT
 - request:
     method: get
     uri: http://www.ctabustracker.com/bustime/api/v1/getpredictions?dir=Northbound&key=YOUR_CTA_API_KEY&rt=147&stpid=1125
@@ -218,18 +219,33 @@ http_interactions:
     headers:
       Set-Cookie:
       - ARPT=KIRNNRScl-ctabt-2wb001CKYJO; path=/
-      - JSESSIONID=4DA8B4B05FFE12C3063CAA3E601E8B12; Path=/bustime
+      - JSESSIONID=53CB8C76EBC8DE802174B7E54D0DE08B; Path=/bustime
       Server:
       - Apache-Coyote/1.1
       Content-Type:
       - text/xml
       Content-Length:
-      - '79'
+      - '1176'
       Date:
-      - Sun, 20 Oct 2013 04:15:40 GMT
+      - Sun, 20 Oct 2013 18:08:20 GMT
     body:
       encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\t\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
+      string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\t\r\n\t\t\t\r\n\t\t\t\t<prd>\r\n\t\t\t\t\t<tmstmp>20131020
+        13:07</tmstmp>\r\n\t\t\t\t\t<typ>A</typ>\r\n\t\t\t\t\t<stpnm>Michigan &amp;
+        Huron</stpnm>\r\n\t\t\t\t\t<stpid>1125</stpid>\r\n\t\t\t\t\t<vid>4194</vid>\r\n\t\t\t\t\t\r\n\t\t\t\t\t
+        \t\t\t\t\t\r\n\t\t\t\t\t<dstp>430</dstp>\r\n\t\t\t\t\t<rt>147</rt>\r\n\t\t\t\t\t<rtdir>Northbound</rtdir>\r\n\t\t
+        \       \t<des>Howard Station</des>\r\n\t\t        \t<prdtm>20131020 13:08</prdtm>\r\n\t\t
+        \       \t\r\n\t\t\t\t</prd>\t\t\t\r\n\t\t\t\r\n\t\t\t\t<prd>\r\n\t\t\t\t\t<tmstmp>20131020
+        13:08</tmstmp>\r\n\t\t\t\t\t<typ>A</typ>\r\n\t\t\t\t\t<stpnm>Michigan &amp;
+        Huron</stpnm>\r\n\t\t\t\t\t<stpid>1125</stpid>\r\n\t\t\t\t\t<vid>4193</vid>\r\n\t\t\t\t\t\r\n\t\t\t\t\t
+        \t\t\t\t\t\r\n\t\t\t\t\t<dstp>3467</dstp>\r\n\t\t\t\t\t<rt>147</rt>\r\n\t\t\t\t\t<rtdir>Northbound</rtdir>\r\n\t\t
+        \       \t<des>Howard Station</des>\r\n\t\t        \t<prdtm>20131020 13:14</prdtm>\r\n\t\t
+        \       \t\r\n\t\t\t\t</prd>\t\t\t\r\n\t\t\t\r\n\t\t\t\t<prd>\r\n\t\t\t\t\t<tmstmp>20131020
+        13:07</tmstmp>\r\n\t\t\t\t\t<typ>A</typ>\r\n\t\t\t\t\t<stpnm>Michigan &amp;
+        Huron</stpnm>\r\n\t\t\t\t\t<stpid>1125</stpid>\r\n\t\t\t\t\t<vid>4156</vid>\r\n\t\t\t\t\t\r\n\t\t\t\t\t
+        \t\t\t\t\t\r\n\t\t\t\t\t<dstp>9000</dstp>\r\n\t\t\t\t\t<rt>147</rt>\r\n\t\t\t\t\t<rtdir>Northbound</rtdir>\r\n\t\t
+        \       \t<des>Howard Station</des>\r\n\t\t        \t<prdtm>20131020 13:25</prdtm>\r\n\t\t
+        \       \t\r\n\t\t\t\t</prd>\t\t\t\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
     http_version: 
-  recorded_at: Sun, 20 Oct 2013 04:15:41 GMT
+  recorded_at: Sun, 20 Oct 2013 18:08:20 GMT
 recorded_with: VCR 2.4.0
