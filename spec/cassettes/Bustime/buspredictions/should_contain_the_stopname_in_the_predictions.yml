@@ -18,33 +18,18 @@ http_interactions:
     headers:
       Set-Cookie:
       - ARPT=KIRNNRScl-ctabt-2wb001CKYJO; path=/
-      - JSESSIONID=075A48912A197C00E6670F3D34A988B6; Path=/bustime
+      - JSESSIONID=F52C0F74B84632CBEA14EC5B8B32B07C; Path=/bustime
       Server:
       - Apache-Coyote/1.1
       Content-Type:
       - text/xml
       Content-Length:
-      - '1178'
+      - '79'
       Date:
-      - Sun, 20 Oct 2013 03:23:57 GMT
+      - Sun, 20 Oct 2013 04:15:40 GMT
     body:
       encoding: US-ASCII
-      string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\t\r\n\t\t\t\r\n\t\t\t\t<prd>\r\n\t\t\t\t\t<tmstmp>20131019
-        22:23</tmstmp>\r\n\t\t\t\t\t<typ>A</typ>\r\n\t\t\t\t\t<stpnm>Michigan &amp;
-        Huron</stpnm>\r\n\t\t\t\t\t<stpid>1125</stpid>\r\n\t\t\t\t\t<vid>4173</vid>\r\n\t\t\t\t\t\r\n\t\t\t\t\t
-        \t\t\t\t\t\r\n\t\t\t\t\t<dstp>3893</dstp>\r\n\t\t\t\t\t<rt>147</rt>\r\n\t\t\t\t\t<rtdir>Northbound</rtdir>\r\n\t\t
-        \       \t<des>Howard Station</des>\r\n\t\t        \t<prdtm>20131019 22:32</prdtm>\r\n\t\t
-        \       \t\r\n\t\t\t\t</prd>\t\t\t\r\n\t\t\t\r\n\t\t\t\t<prd>\r\n\t\t\t\t\t<tmstmp>20131019
-        22:23</tmstmp>\r\n\t\t\t\t\t<typ>A</typ>\r\n\t\t\t\t\t<stpnm>Michigan &amp;
-        Huron</stpnm>\r\n\t\t\t\t\t<stpid>1125</stpid>\r\n\t\t\t\t\t<vid>4123</vid>\r\n\t\t\t\t\t\r\n\t\t\t\t\t
-        \t\t\t\t\t\r\n\t\t\t\t\t<dstp>9313</dstp>\r\n\t\t\t\t\t<rt>147</rt>\r\n\t\t\t\t\t<rtdir>Northbound</rtdir>\r\n\t\t
-        \       \t<des>Howard Station</des>\r\n\t\t        \t<prdtm>20131019 22:40</prdtm>\r\n\t\t
-        \       \t\r\n\t\t\t\t</prd>\t\t\t\r\n\t\t\t\r\n\t\t\t\t<prd>\r\n\t\t\t\t\t<tmstmp>20131019
-        22:23</tmstmp>\r\n\t\t\t\t\t<typ>A</typ>\r\n\t\t\t\t\t<stpnm>Michigan &amp;
-        Huron</stpnm>\r\n\t\t\t\t\t<stpid>1125</stpid>\r\n\t\t\t\t\t<vid>4168</vid>\r\n\t\t\t\t\t\r\n\t\t\t\t\t
-        \t\t\t\t\t\r\n\t\t\t\t\t<dstp>15037</dstp>\r\n\t\t\t\t\t<rt>147</rt>\r\n\t\t\t\t\t<rtdir>Northbound</rtdir>\r\n\t\t
-        \       \t<des>Howard Station</des>\r\n\t\t        \t<prdtm>20131019 22:49</prdtm>\r\n\t\t
-        \       \t\r\n\t\t\t\t</prd>\t\t\t\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
+      string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\t\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
     http_version: 
-  recorded_at: Sun, 20 Oct 2013 03:23:58 GMT
+  recorded_at: Sun, 20 Oct 2013 04:15:40 GMT
 recorded_with: VCR 2.4.0

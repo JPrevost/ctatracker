@@ -1,29 +1,18 @@
-<div data-role="page" data-theme="b">
+<ol class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "Choose a Direction", busdirections_path( params[:id], params[:rtnm] ) %></li>
+  <li class="active">Choose a Stop</li>
+</ol>
 
-  <div data-role="header" data-theme="b">
-    <h2>Choose a stop</h2>
+<h2>Choose a stop</h2>
 
-    <a href="/" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-transition="pop" data-direction="reverse">Home</a>
+<ul>
 
-  </div>
+  <% @busstops.each do |l| %>
 
-  <div data-role="content">
+    <li>
+      <%= link_to l['stpnm'], buspredictions_path( params[:id], params[:rtnm], params[:dir], l['stpid'], l['stpnm'] ) %>
+    </li>
 
-    <ul data-role="listview" data-inset="true" data-filter="true" data-theme="d">
-
-      <% @busstops.each do |l| %>
-
-        <li>
-          <%= link_to l['stpnm'], '/bustimes/' + params[:id] + '/' + URI::encode(params[:dir]) + '/' + l['stpid'], "data-transition" => "slide" %>
-        </li>
-
-      <% end %>
-    </ul>
-
-  </div>
-
-  <div data-role="footer" data-theme="b">
-    <h4>&#9400;2012, Pennyland Productions.</h4>
-  </div>
-
-</div>
+  <% end %>
+</ul>

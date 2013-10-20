@@ -18,7 +18,7 @@ http_interactions:
     headers:
       Set-Cookie:
       - ARPT=KIRNNRScl-ctabt-2wb001CKYJO; path=/
-      - JSESSIONID=0FA3B2D5149E610B2C6FACE5D79C87B9; Path=/bustime
+      - JSESSIONID=5F835A986F1976DAA7DBDA4483E2B8F6; Path=/bustime
       Server:
       - Apache-Coyote/1.1
       Content-Type:
@@ -26,7 +26,7 @@ http_interactions:
       Content-Length:
       - '7858'
       Date:
-      - Sun, 20 Oct 2013 03:23:57 GMT
+      - Sun, 20 Oct 2013 04:15:39 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>4725</stpid>\r\n\t\t\t<stpnm>Congress
@@ -80,5 +80,5 @@ http_interactions:
         &amp; Van Buren</stpnm>\r\n\t\t\t<lat>41.876870711802</lat>\r\n\t\t\t<lon>-87.627607584</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>449</stpid>\r\n\t\t\t<stpnm>Washington
         &amp; Wabash</stpnm>\r\n\t\t\t<lat>41.883185299824</lat>\r\n\t\t\t<lon>-87.625976800919</lon>\r\n\t\t\t</stop>\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
     http_version: 
-  recorded_at: Sun, 20 Oct 2013 03:23:57 GMT
+  recorded_at: Sun, 20 Oct 2013 04:15:40 GMT
 recorded_with: VCR 2.4.0

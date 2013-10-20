@@ -17,8 +17,8 @@ http_interactions:
       message: OK
     headers:
       Set-Cookie:
-      - ARPT=KIRNNRScl-ctabt-2wb002CKYJQ; path=/
-      - JSESSIONID=1F7DB658829C416CC96F40CB84FA3D7F; Path=/bustime
+      - ARPT=KIRNNRScl-ctabt-2wb001CKYJO; path=/
+      - JSESSIONID=FFA46D8985F06BDD97272B4B100992EF; Path=/bustime
       Server:
       - Apache-Coyote/1.1
       Content-Type:
@@ -26,7 +26,7 @@ http_interactions:
       Transfer-Encoding:
       - chunked
       Date:
-      - Sun, 20 Oct 2013 03:23:57 GMT
+      - Sun, 20 Oct 2013 04:15:40 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>1</rt>\r\n\t\t\t\t<rtnm>Bronzeville/Union
@@ -86,7 +86,7 @@ http_interactions:
         of Chicago Hospitals Express</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>201</rt>\r\n\t\t\t\t<rtnm>Central/Ridge</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>205</rt>\r\n\t\t\t\t<rtnm>Chicago/Golf</rtnm>\r\n\t\t\t</route>\t\t\r\n\r\n\t\t\t<route>\r\n\t\t\t\t<rt>206</rt>\r\n\t\t\t\t<rtnm>Evanston
         Circulator</rtnm>\r\n\t\t\t</route>\t\t\r\n\t\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
     http_version: 
-  recorded_at: Sun, 20 Oct 2013 03:23:58 GMT
+  recorded_at: Sun, 20 Oct 2013 04:15:41 GMT
 - request:
     method: get
     uri: http://www.ctabustracker.com/bustime/api/v1/getdirections?key=YOUR_CTA_API_KEY&rt=147
@@ -104,8 +104,8 @@ http_interactions:
       message: OK
     headers:
       Set-Cookie:
-      - ARPT=KIRNNRScl-ctabt-2wb002CKYJQ; path=/
-      - JSESSIONID=F876C033E67B533DEF112AF1AD01C809; Path=/bustime
+      - ARPT=KIRNNRScl-ctabt-2wb001CKYJO; path=/
+      - JSESSIONID=EA5CB530ACDBF264173F22AEE02C37FB; Path=/bustime
       Server:
       - Apache-Coyote/1.1
       Content-Type:
@@ -113,10 +113,10 @@ http_interactions:
       Content-Length:
       - '142'
       Date:
-      - Sun, 20 Oct 2013 03:23:57 GMT
+      - Sun, 20 Oct 2013 04:15:40 GMT
     body:
       encoding: US-ASCII
       string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\r\n\t\t\t\t\r\n\t\t\t<dir>Northbound</dir>\r\n\t\t\t\t\r\n\t\t\t<dir>Southbound</dir>\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
     http_version: 
-  recorded_at: Sun, 20 Oct 2013 03:23:58 GMT
+  recorded_at: Sun, 20 Oct 2013 04:15:41 GMT
 recorded_with: VCR 2.4.0
