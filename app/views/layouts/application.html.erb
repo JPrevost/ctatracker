@@ -1,28 +1,30 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Ctatracker</title>
+  <head>
+    <title>Ctatracker</title>
 
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-</head>
-<body>
+  </head>
+  <body>
 
-  <div class="page-header">
-    <h1>CTA Bus Tracker <small>by Jeremy Prevost</small></h1>
-  </div>
+    <div class="container">
 
-  <div class="container">
-    <%= yield %>
-  </div>
+      <div class="page-header">
+        <h1>CTA Bus Tracker <small>by Jeremy Prevost</small></h1>
+      </div>
 
-  <footer>
-    &#9400;2013, Pennyland Productions.
-  </footer>
+      <%= yield %>
 
-</body>
+      <footer>
+        &#9400;2013, Pennyland Productions.
+      </footer>
+
+    </div>
+
+  </body>
 </html>

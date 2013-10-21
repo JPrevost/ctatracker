@@ -34,15 +34,32 @@
     %>
 
   <li class="list-group-item">
-    
+
     <%= timedif.to_int %> Min (to <%= l['des'] %>)
 
-     <a href="#" class="btn btn-sm btn-info" data-toggle="popover" title="" data-content="<%= l['rt'] %> <%= l['rtdir'] %> to <%= l['des'] %> <%= timedif.to_int %> Min (to <%= l['des'] %>) Current Time: <%= currenttime.strftime("%I:%M%p") %> Arrival Time: <%= predictiontime.strftime("%I:%M%p") %>" data-original-title="Bus <%= l['vid'] %>">Click to toggle popover</a>
+    <a data-toggle="modal" href="#modal-<%= l['vid'] %>" class="pull-right">More Info</a>
+
+    <!-- Modal -->
+    <div class="modal fade" id="modal-<%= l['vid'] %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><%= l['rt'] %> <%= l['rtdir'] %> to <%= l['des'] %></h4>
+          </div>
+          <div class="modal-body">
+            Bus #<%= l['vid'] %><br />
+            <%= timedif.to_int %> Min (to <%= l['des'] %>)<br />
+            Current Time: <%= currenttime.strftime("%I:%M%p") %><br />
+            Arrival Time: <%= predictiontime.strftime("%I:%M%p") %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
   </li>
   <% end %>
 </ul>
-
-<script>
-  $('.btn').popover('show');
-</script>
