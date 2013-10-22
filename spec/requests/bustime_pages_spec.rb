@@ -1,16 +1,12 @@
 require 'spec_helper'
 
-describe "BustimePages" do
+describe "BustimePages", :vcr do
 
   subject { page }
 
   before { visit root_path }
 
   describe "Home page" do
-
-    it { should have_selector('h2', text: 'Choose a route') }
-
-    it { find_link('Choose a Route').visible?.should equal true }
 
     it { find_link('147 Outer Drive Express').visible?.should equal true }
 

@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Ctatracker</title>
+  <head>
+    <title>Ctatracker</title>
 
-  <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    "application", :media => "all" %>
+    <%= javascript_include_tag "application" %>
+    <script src="//use.edgefonts.net/pt-sans-narrow:n4,n7:all.js"></script>
+    <%= csrf_meta_tags %>
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0-beta.1/jquery.mobile-1.2.0-beta.1.min.css" />
-  <script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
-  <script src="http://code.jquery.com/mobile/1.2.0-beta.1/jquery.mobile-1.2.0-beta.1.min.js"></script>
+  </head>
+  <body>
 
-  <script src="http://ajax.aspnetcdn.com/ajax/modernizr/modernizr-2.0.6-development-only.js"></script>
+    <div class="container">
 
-</head>
-<body>
+      <div class="page-header">
+        <h1>CTA Bus Tracker <small>by Jeremy Prevost</small></h1>
+      </div>
 
-<%= yield %>
+      <%= yield %>
 
-</body>
+      <footer>
+        &#9400;2013, <a href="https://github.com/JPrevost/ctatracker">Jeremy Prevost</a>
+      </footer>
+
+    </div>
+
+  </body>
 </html>

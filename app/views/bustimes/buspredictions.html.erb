@@ -1,113 +1,65 @@
-<% @stopname = @buspredictions.first['stpnm'] %>
+<ol class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+  <li><%= link_to "Choose a Direction", busdirections_path( params[:id], params[:rtnm] ) %></li>
+  <li><%= link_to "Choose a Stop", busstops_path( params[:id], params[:rtnm], params[:dir], params[:stpnm] ) %></li>
+  <li class="active">Upcoming Buses</li>
+</ol>
 
-<div data-role="page" data-theme="b">
+<% @stopname = params['stpnm'] %>
 
-  <div data-role="header" data-theme="b">
-    <h2>Upcoming buses</h2>
+<a href="javascript:window.location.reload();" class="pull-right">Refresh</a>
 
-    <a href="/" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-transition="pop" data-direction="reverse">Home</a>
-  </div>
+<h3><%= @stopname %>, Route <%= params['id']%> <%= params['dir']%></h3>
 
-  <div data-role="content">
+<ul class="list-group">
+  <% @buspredictions.each do |l| %>
+    <%
+      timestamp = l['tmstmp']
+      year = timestamp[0,4]
+      month = timestamp[4,2]
+      day = timestamp[6,2]
+      hour = timestamp[9,2]
+      min = timestamp[12,2]
+      currenttime = Time.local(year,month,day,hour,min)
 
-    <a href="javascript:window.location.reload();" data-icon="refresh" data-role="button">Refresh</a>
+      prediction = l['prdtm']
+      year = prediction[0,4]
+      month = prediction[4,2]
+      day = prediction[6,2]
+      hour = prediction[9,2]
+      min = prediction[12,2]
+      predictiontime = Time.local(year,month,day,hour,min)
 
-    <h3><%= @stopname %>, Route <%= params['id']%> <%= params['dir']%></h3>
+      timedif = (predictiontime - currenttime)/60
+    %>
 
-    <ul data-role="listview" data-inset="true" data-theme="d">
-      <% @buspredictions.each do |l| %>
-        <%
-          timestamp = l['tmstmp']
-          year = timestamp[0,4]
-          month = timestamp[4,2]
-          day = timestamp[6,2]
-          hour = timestamp[9,2]
-          min = timestamp[12,2]
-          currenttime = Time.local(year,month,day,hour,min)
+  <li class="list-group-item">
 
-          prediction = l['prdtm']
-          year = prediction[0,4]
-          month = prediction[4,2]
-          day = prediction[6,2]
-          hour = prediction[9,2]
-          min = prediction[12,2]
-          predictiontime = Time.local(year,month,day,hour,min)
+    <%= timedif.to_int %> Min (to <%= l['des'] %>)
 
-          timedif = (predictiontime - currenttime)/60
-        %>
+    <a data-toggle="modal" href="#modal-<%= l['vid'] %>" class="pull-right">More Info</a>
 
-      <li data-icon="info">
-        <a href="#pop<%= l['vid'] %>" data-rel="dialog" data-transition="pop"><%= timedif.to_int %> Min (to <%= l['des'] %>)</a>
-      </li>
-      <% end %>
-    </ul>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-<%= l['vid'] %>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <h4 class="modal-title"><%= l['rt'] %> <%= l['rtdir'] %> to <%= l['des'] %></h4>
+          </div>
+          <div class="modal-body">
+            Bus #<%= l['vid'] %><br />
+            <%= timedif.to_int %> Min (to <%= l['des'] %>)<br />
+            Current Time: <%= currenttime.strftime("%I:%M%p") %><br />
+            Arrival Time: <%= predictiontime.strftime("%I:%M%p") %>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
-  </div>
-
-  <div data-role="footer" data-theme="b">
-    <h4>&#9400;2012, Pennyland Productions.</h4>
-  </div>
-
-      <script>
-      if (Modernizr.localstorage) {
-
-        var  busstopObject = {
-          'rt': <%= params['id']%>,
-          'stpnm': '<%= @stopname %>',
-          'dir': '<%= params['direction']%>',
-          'stpid': '<%= params['stopid']%>',
-          'path': '<%= request.fullpath %>'
-        };
-
-      // Put the object into storage
-      localStorage.setItem('<%= request.fullpath %>', JSON.stringify(busstopObject));
-
-      }
-    else {
-        // no localstorage means no storing of recent stops
-    }
-  </script>
-
-</div>
-
-
-<% @buspredictions.each do |l| %>
-  <%
-    timestamp = l['tmstmp']
-    year = timestamp[0,4]
-    month = timestamp[4,2]
-    day = timestamp[6,2]
-    hour = timestamp[9,2]
-    min = timestamp[12,2]
-    currenttime = Time.local(year,month,day,hour,min)
-
-    prediction = l['prdtm']
-    year = prediction[0,4]
-    month = prediction[4,2]
-    day = prediction[6,2]
-    hour = prediction[9,2]
-    min = prediction[12,2]
-    predictiontime = Time.local(year,month,day,hour,min)
-
-    timedif = (predictiontime - currenttime)/60
-  %>
-
-  <div id="pop<%= l['vid'] %>" data-role="page">
-
-    <div data-role="header" data-theme="e">
-      <h1>Bus <%= l['vid'] %></h1>
-    </div>
-
-    <div data-role="content">
-
-      <p><%= l['rt'] %> <%= l['rtdir'] %> to <%= l['des'] %></p>
-      <p><%= timedif.to_int %> Min (to <%= l['des'] %>)</p>
-      <p>Current Time: <%= currenttime.strftime("%I:%M%p") %></p>
-      <p>Arrival Time: <%= predictiontime.strftime("%I:%M%p") %></p>
-
-      <p><a href="#" data-rel="back" data-role="button" data-inline="true" data-icon="back">Close</a></p>
-
-    </div>
-
-  </div>
-<% end %>
+  </li>
+  <% end %>
+</ul>

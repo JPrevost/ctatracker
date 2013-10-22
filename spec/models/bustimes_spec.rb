@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Bustime do
+describe Bustime, :vcr do
 
   it "should have access to the API key" do
     expect do

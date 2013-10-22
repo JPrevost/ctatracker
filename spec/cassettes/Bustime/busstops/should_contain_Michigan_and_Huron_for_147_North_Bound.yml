@@ -1,0 +1,84 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.ctabustracker.com/bustime/api/v1/getstops?dir=Northbound&key=YOUR_CTA_API_KEY&rt=147
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - ! '*/*'
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Set-Cookie:
+      - ARPT=KIRNNRScl-ctabt-2wb002CKYJQ; path=/
+      - JSESSIONID=0D42C5D9423F3E2A2F48D3A14CF88176; Path=/bustime
+      Server:
+      - Apache-Coyote/1.1
+      Content-Type:
+      - text/xml
+      Content-Length:
+      - '7858'
+      Date:
+      - Sun, 20 Oct 2013 18:08:17 GMT
+    body:
+      encoding: US-ASCII
+      string: ! "<?xml version=\"1.0\"?>\r\n\r\n\t\t<bustime-response>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>4725</stpid>\r\n\t\t\t<stpnm>Congress
+        &amp; Michigan</stpnm>\r\n\t\t\t<lat>41.875820216955</lat>\r\n\t\t\t<lon>-87.624002695084</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1111</stpid>\r\n\t\t\t<stpnm>Congress
+        &amp; Wabash</stpnm>\r\n\t\t\t<lat>41.875764296593</lat>\r\n\t\t\t<lon>-87.62581050396</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>74</stpid>\r\n\t\t\t<stpnm>Congress
+        Plaza &amp; Michigan</stpnm>\r\n\t\t\t<lat>41.87486956415</lat>\r\n\t\t\t<lon>-87.623605728149</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>4847</stpid>\r\n\t\t\t<stpnm>Foster
+        &amp; Marine Drive</stpnm>\r\n\t\t\t<lat>41.976457370367</lat>\r\n\t\t\t<lon>-87.652562856674</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1220</stpid>\r\n\t\t\t<stpnm>Howard
+        &amp; Sheridan</stpnm>\r\n\t\t\t<lat>42.019262281948</lat>\r\n\t\t\t<lon>-87.666247487068</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1127</stpid>\r\n\t\t\t<stpnm>Michigan
+        &amp; Chestnut</stpnm>\r\n\t\t\t<lat>41.898096593399</lat>\r\n\t\t\t<lon>-87.623970508575</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1128</stpid>\r\n\t\t\t<stpnm>Michigan
+        &amp; Delaware/Walton</stpnm>\r\n\t\t\t<lat>41.899478127837</lat>\r\n\t\t\t<lon>-87.624024152756</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1123</stpid>\r\n\t\t\t<stpnm>Michigan
+        &amp; Grand</stpnm>\r\n\t\t\t<lat>41.891675659635</lat>\r\n\t\t\t<lon>-87.624045610428</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1122</stpid>\r\n\t\t\t<stpnm>Michigan
+        &amp; Hubbard (Tribune Bldg.)</stpnm>\r\n\t\t\t<lat>41.890178147557</lat>\r\n\t\t\t<lon>-87.623981237411</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1125</stpid>\r\n\t\t\t<stpnm>Michigan
+        &amp; Huron</stpnm>\r\n\t\t\t<lat>41.894834296652</lat>\r\n\t\t\t<lon>-87.624126076698</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1124</stpid>\r\n\t\t\t<stpnm>Michigan
+        &amp; Ontario</stpnm>\r\n\t\t\t<lat>41.893225048512</lat>\r\n\t\t\t<lon>-87.624077796936</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1119</stpid>\r\n\t\t\t<stpnm>Michigan
+        &amp; Randolph</stpnm>\r\n\t\t\t<lat>41.884686969581</lat>\r\n\t\t\t<lon>-87.624351382256</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1120</stpid>\r\n\t\t\t<stpnm>Michigan
+        &amp; South Water</stpnm>\r\n\t\t\t<lat>41.886699790703</lat>\r\n\t\t\t<lon>-87.624415755272</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1006</stpid>\r\n\t\t\t<stpnm>Paulina
+        &amp; Howard Terminal</stpnm>\r\n\t\t\t<lat>42.017755808411</lat>\r\n\t\t\t<lon>-87.672979831696</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>14805</stpid>\r\n\t\t\t<stpnm>Rogers
+        &amp; Ashland</stpnm>\r\n\t\t\t<lat>42.018086597986</lat>\r\n\t\t\t<lon>-87.670935988426</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>14804</stpid>\r\n\t\t\t<stpnm>Rogers
+        &amp; Greenview</stpnm>\r\n\t\t\t<lat>42.019055044319</lat>\r\n\t\t\t<lon>-87.668972611427</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>15319</stpid>\r\n\t\t\t<stpnm>Rogers
+        &amp; Paulina</stpnm>\r\n\t\t\t<lat>42.017193860731</lat>\r\n\t\t\t<lon>-87.672894001007</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1190</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Ardmore</stpnm>\r\n\t\t\t<lat>41.987523147877</lat>\r\n\t\t\t<lon>-87.655261158943</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1203</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Arthur (Red Line)</stpnm>\r\n\t\t\t<lat>42.00022548526</lat>\r\n\t\t\t<lon>-87.660684585571</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1186</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Balmoral</stpnm>\r\n\t\t\t<lat>41.980086359774</lat>\r\n\t\t\t<lon>-87.655046582222</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1185</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Berwyn </stpnm>\r\n\t\t\t<lat>41.978188144956</lat>\r\n\t\t\t<lon>-87.654987573624</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1219</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Birchwood</stpnm>\r\n\t\t\t<lat>42.0183297073</lat>\r\n\t\t\t<lon>-87.665700316429</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1029</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Broadway/Devon</stpnm>\r\n\t\t\t<lat>41.998164418264</lat>\r\n\t\t\t<lon>-87.660427093506</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1188</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Bryn Mawr</stpnm>\r\n\t\t\t<lat>41.983583552777</lat>\r\n\t\t\t<lon>-87.655148506165</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1187</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Catalpa</stpnm>\r\n\t\t\t<lat>41.981805072698</lat>\r\n\t\t\t<lon>-87.655110955238</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1215</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Chase</stpnm>\r\n\t\t\t<lat>42.014069181644</lat>\r\n\t\t\t<lon>-87.664107084274</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1213</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Estes</stpnm>\r\n\t\t\t<lat>42.011625926384</lat>\r\n\t\t\t<lon>-87.662824988365</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1209</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Farwell</stpnm>\r\n\t\t\t<lat>42.006898578798</lat>\r\n\t\t\t<lon>-87.661221027374</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1184</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Foster</stpnm>\r\n\t\t\t<lat>41.976620878734</lat>\r\n\t\t\t<lon>-87.654960751534</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1192</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Glenlake</stpnm>\r\n\t\t\t<lat>41.99251906512</lat>\r\n\t\t\t<lon>-87.655400633812</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1198</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Granville</stpnm>\r\n\t\t\t<lat>41.994799592918</lat>\r\n\t\t\t<lon>-87.655513286591</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1212</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Greenleaf</stpnm>\r\n\t\t\t<lat>42.010593592939</lat>\r\n\t\t\t<lon>-87.662470936775</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1189</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Hollywood</stpnm>\r\n\t\t\t<lat>41.98540185773</lat>\r\n\t\t\t<lon>-87.655207514763</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1217</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Jarvis</stpnm>\r\n\t\t\t<lat>42.01627719783</lat>\r\n\t\t\t<lon>-87.665104866028</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1200</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Kenmore</stpnm>\r\n\t\t\t<lat>41.998268071196</lat>\r\n\t\t\t<lon>-87.656977772713</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1204</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Loyola</stpnm>\r\n\t\t\t<lat>42.00169649612</lat>\r\n\t\t\t<lon>-87.660732865334</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1211</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Lunt</stpnm>\r\n\t\t\t<lat>42.009349987546</lat>\r\n\t\t\t<lon>-87.662068605423</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1210</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Morse</stpnm>\r\n\t\t\t<lat>42.008146218144</lat>\r\n\t\t\t<lon>-87.661634087563</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1206</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; North Shore</stpnm>\r\n\t\t\t<lat>42.003896969205</lat>\r\n\t\t\t<lon>-87.660791873932</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1208</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Pratt</stpnm>\r\n\t\t\t<lat>42.005838265424</lat>\r\n\t\t\t<lon>-87.660909891129</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1199</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Rosemont</stpnm>\r\n\t\t\t<lat>41.996629537774</lat>\r\n\t\t\t<lon>-87.655566930771</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1216</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Sherwin</stpnm>\r\n\t\t\t<lat>42.015181170496</lat>\r\n\t\t\t<lon>-87.664734721184</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1191</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Thorndale</stpnm>\r\n\t\t\t<lat>41.99027035281</lat>\r\n\t\t\t<lon>-87.655341625214</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1214</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Touhy</stpnm>\r\n\t\t\t<lat>42.012913330331</lat>\r\n\t\t\t<lon>-87.663484811783</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1201</stpid>\r\n\t\t\t<stpnm>Sheridan
+        &amp; Winthrop</stpnm>\r\n\t\t\t<lat>41.998256111251</lat>\r\n\t\t\t<lon>-87.658351063728</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1115</stpid>\r\n\t\t\t<stpnm>State
+        &amp; Adams</stpnm>\r\n\t\t\t<lat>41.879403012427</lat>\r\n\t\t\t<lon>-87.627666592598</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1117</stpid>\r\n\t\t\t<stpnm>State
+        &amp; Madison</stpnm>\r\n\t\t\t<lat>41.881843352307</lat>\r\n\t\t\t<lon>-87.627752423286</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>1113</stpid>\r\n\t\t\t<stpnm>State
+        &amp; Van Buren</stpnm>\r\n\t\t\t<lat>41.876870711802</lat>\r\n\t\t\t<lon>-87.627607584</lon>\r\n\t\t\t</stop>\r\n\t\t\t\t\r\n\t\t\t<stop>\r\n\t\t\t<stpid>449</stpid>\r\n\t\t\t<stpnm>Washington
+        &amp; Wabash</stpnm>\r\n\t\t\t<lat>41.883185299824</lat>\r\n\t\t\t<lon>-87.625976800919</lon>\r\n\t\t\t</stop>\r\n\r\n\t\t</bustime-response>\r\n\r\n\t\t\r\n"
+    http_version: 
+  recorded_at: Sun, 20 Oct 2013 18:08:18 GMT
+recorded_with: VCR 2.4.0

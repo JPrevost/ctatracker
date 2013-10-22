@@ -2,10 +2,6 @@
 
 This is primarily a demo app that uses the freely available CTA Bustracker API to allow users to see bus arrival predictions for specific routes and stops. It uses data provided by the CTA, and thus is as accurate (or inaccurate) as the provided data.
 
-HTML5 Local Storage is used to remember recently used stops/routes.
-
-jQuery Mobile is used to create a mobile friendly interface.
-
 == Requirements
 
 This Ruby on Rails app requires you request your own CTA API key. For local development you add it to the /config/heroku_env.rb file as shown here:

@@ -1,81 +1,12 @@
-<div id="indexPage" data-role="page" data-theme="b">
+<ol class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+  <li class="active">Choose a Route</li>
+</ol>
 
-  <div data-role="header" data-theme="b">
-    <h2>Choose a route</h2>
-  </div>
-
-  <div data-role="content">
-
-    <div class="content-favoriteroutes">
-      <ul data-role="listview" data-inset="true" id="favorites" data-theme="d"></ul>
-    </div>
-
-    <div class="content-allroutes">
-      <ul data-role="button" data-theme="d">
-        <a href="/#allroutes" data-transition="flip">Choose a Route</a>
-      </ul>
-    </div>
-  </div>
-
-  <div data-role="footer" data-theme="b">
-    <h4>&#9400;2012, Pennyland Productions.</h4>
-  </div>
-
-  <script>
-
-    function deletestop(path){
-      localStorage.removeItem(path);
-      window.location.reload();
-      }
-
-    $("#indexPage").live('pagebeforeshow', function() {
-
-      if (Modernizr.localstorage) {
-
-        //remove favorites so we can load them in without duplication
-        $("#favorites").empty();
-
-        var fav = '';
-        // Retrieve objects from storage
-
-        for (var i = 0; i < localStorage.length; i++){
-
-          fav = JSON.parse(localStorage.getItem(localStorage.key(i)));
-
-          //todo: clean this up to be more readable
-          $('<li><a href="' + fav.path +'">' + fav.rt + ' ' + fav.dir + ' ' + fav.stpnm + '</a><a title="deletestop" href="javascript:deletestop(' + "'" + encodeURI(fav.path) + "'" + ');" data-icon="delete">test</a></li>').appendTo('#favorites');
-
-        }
-
-        $("#favorites").listview('refresh');
-
-      }
-    else {
-      // No local storage
-    }
-
-
-    });
-  </script>
-</div>
-
-<div data-role="page" id="allroutes" data-theme="b">
-
-  <div data-role="header" data-theme="b">
-    <h2>Choose a route</h2>
-  </div>
-
-  <div data-role="content">
-    <div class="content-allroutes">
-    <ul data-role="listview" data-inset="true">
-        <ul data-role="listview" data-filter="true" data-inset="true" data-theme="d">
-          <% @busroutes.each do |l| %>
-              <li>
-                <%= link_to l['rt'] + ' ' + l['rtnm'], '/bustimes/' + l['rt'], "data-transition" => "slide" %>
-            </li>
-            <% end %>
-        </ul>
-    </ul>
-  </div>
-  </div>
-</div>
+<ul class="list-group">
+  <% @busroutes.each do |l| %>
+    <li class="list-group-item">
+      <%= link_to l['rt'] + ' ' + l['rtnm'], busdirections_path(l['rt'], l['rtnm']) %>
+    </li>
+  <% end %>
+</ul>

@@ -1,23 +1,12 @@
-<div data-role="page" data-theme="b">
+<ol class="breadcrumb">
+  <li><%= link_to "Home", root_path %></li>
+  <li class="active">Choose a Direction</li>
+</ol>
 
-<div data-role="header" data-theme="b">
-  <h2>Choose Direction</h2>
-  <a href="/" class="ui-btn-right" data-icon="home" data-iconpos="notext" data-transition="pop" data-direction="reverse">Home</a>
-</div>
-
-<div data-role="content">
-  <ul data-role="listview" data-inset="true" data-theme="d">
-
-    <% @busdirections.each do |l| %>
-      <li>
-        <%= link_to l['dir'], '/bustimes/' + params[:id] + '/' + URI::encode(l['dir']), "data-transition" => "slide" %>
-      </li>
-    <% end %>
-  </ul>
-</div>
-
-  <div data-role="footer" data-theme="b">
-    <h4>&#9400;2012, Pennyland Productions.</h4>
-  </div>
-
-</div>
+<ul class="list-group">
+  <% @busdirections.each do |l| %>
+    <li class="list-group-item">
+      <%= link_to l['dir'], busstops_path( params[:id], params[:rtnm], l['dir'] ) %>
+    </li>
+  <% end %>
+</ul>
