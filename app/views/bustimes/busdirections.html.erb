@@ -3,6 +3,8 @@
   <li class="active">Choose a Direction</li>
 </ol>
 
+<h2><%= [params[:id], params[:rtnm]].join(" ") %></h2>
+
 <ul class="list-group">
   <% @busdirections.each do |l| %>
     <li class="list-group-item">
