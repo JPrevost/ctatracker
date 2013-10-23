@@ -1,7 +1,7 @@
 <ol class="breadcrumb">
-  <li><%= link_to "Home", root_path %></li>
-  <li><%= link_to "Choose a Direction", busdirections_path( params[:id], params[:rtnm] ) %></li>
-  <li><%= link_to "Choose a Stop", busstops_path( params[:id], params[:rtnm], params[:dir], params[:stpnm] ) %></li>
+  <li><%= link_to "Route", root_path %></li>
+  <li><%= link_to "Direction", busdirections_path( params[:id], params[:rtnm] ) %></li>
+  <li><%= link_to "Stop", busstops_path( params[:id], params[:rtnm], params[:dir], params[:stpnm] ) %></li>
   <li class="active">Upcoming Buses</li>
 </ol>
 
@@ -9,7 +9,7 @@
 
 <a href="javascript:window.location.reload();" class="pull-right">Refresh</a>
 
-<h3><%= @stopname %>, Route <%= params['id']%> <%= params['dir']%></h3>
+<h2><%= [ params[:id], params[:rtnm] + ",", params[:dir] + ",", @stopname ].join(" ") %></h2>
 
 <ul class="list-group">
   <% @buspredictions.each do |l| %>

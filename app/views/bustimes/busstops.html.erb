@@ -1,8 +1,10 @@
 <ol class="breadcrumb">
-  <li><%= link_to "Home", root_path %></li>
-  <li><%= link_to "Choose a Direction", busdirections_path( params[:id], params[:rtnm] ) %></li>
+  <li><%= link_to "Route", root_path %></li>
+  <li><%= link_to "Direction", busdirections_path( params[:id], params[:rtnm] ) %></li>
   <li class="active">Choose a Stop</li>
 </ol>
+
+<h2><%= [ params[:id], params[:rtnm] + ",", params[:dir] ].join(" ") %></h2>
 
 <ul class="list-group">
   <% @busstops.each do |l| %>
