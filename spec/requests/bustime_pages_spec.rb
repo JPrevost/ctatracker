@@ -16,6 +16,10 @@ describe "BustimePages", :vcr do
 
       it { find_link('Northbound').visible?.should equal true }
 
+      it "should display route information" do
+        page.should have_content "147 Outer Drive Express"
+      end
+
       describe "clicking Northbound" do
 
         before { click_link('Northbound') }
