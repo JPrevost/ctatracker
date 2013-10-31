@@ -67,7 +67,7 @@ describe "BustimePages", :vcr do
           it { should have_content('Refresh') }
 
           it "should have more info links to bus detail" do
-            pending
+            page.should have_link("More Info", :href => "#modal-4077")
           end
         end
       end
