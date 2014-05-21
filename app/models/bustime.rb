@@ -6,7 +6,7 @@ class Bustime
   def busroutes
     #sample: http://www.ctabustracker.com/bustime/api/v1/getroutes?key=APIKEY
 
-    apiurl = "http://www.ctabustracker.com/bustime/api/v1/getroutes?key=" + ENV['CTA_API_KEY']
+    apiurl = 'http://www.ctabustracker.com/bustime/api/v1/getroutes?key=' + (ENV['CTA_API_KEY'] || 'YOUR_CTA_API_KEY')
 
     doc = Nokogiri::XML(open(apiurl))
 
@@ -19,7 +19,7 @@ class Bustime
     #sample: http://www.ctabustracker.com/bustime/api/v1/getdirections?key=APIKEY&rt=147
 
     doc = Nokogiri::XML(open('http://www.ctabustracker.com/bustime/api/v1/getdirections?key=' + 
-                        ENV['CTA_API_KEY'] + '&rt=' + rt.to_s ))
+                        (ENV['CTA_API_KEY'] || 'YOUR_CTA_API_KEY') + '&rt=' + rt.to_s ))
 
     directions = doc.xpath('//dir').map do |i|
       {'dir' => i.inner_text }
@@ -30,7 +30,7 @@ class Bustime
     #sample http://www.ctabustracker.com/bustime/api/v1/getstops?key=APIKEY&rt=147&dir=North%20Bound
 
     doc = Nokogiri::XML(open('http://www.ctabustracker.com/bustime/api/v1/getstops?key=' + 
-                              ENV['CTA_API_KEY'] + '&rt=' + rt.to_s + '&dir=' + URI::encode(dir)))
+                              (ENV['CTA_API_KEY'] || 'YOUR_CTA_API_KEY') + '&rt=' + rt.to_s + '&dir=' + URI::encode(dir)))
 
     stops = doc.xpath('//stop').map do |i|
       {'stpid' => i.xpath('stpid').inner_text, 'stpnm' => i.xpath('stpnm').inner_text}
@@ -41,7 +41,7 @@ class Bustime
     #sample http://www.ctabustracker.com/bustime/api/v1/getpredictions?key=APIKEY&rt=147&dir=North%20Bound&stpid=1125
 
     doc = Nokogiri::XML(open('http://www.ctabustracker.com/bustime/api/v1/getpredictions?key=' + 
-                              ENV['CTA_API_KEY'] + '&rt=' + rt.to_s + '&dir=' + URI::encode(dir) + '&stpid=' + stpid.to_s))
+                              (ENV['CTA_API_KEY'] || 'YOUR_CTA_API_KEY') + '&rt=' + rt.to_s + '&dir=' + URI::encode(dir) + '&stpid=' + stpid.to_s))
 
     predictions = doc.xpath('//prd').map do |i|
       {'tmstmp' => i.xpath('tmstmp').inner_text,
