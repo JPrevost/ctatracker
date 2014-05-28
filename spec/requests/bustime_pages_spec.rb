@@ -69,6 +69,26 @@ describe "BustimePages", :vcr do
           it "should have more info links to bus detail" do
             page.should have_link("More Info", :href => "#modal-4077")
           end
+
+          describe 'recent stops' do
+            it 'remembers recently used stops' do
+              visit root_path
+              expect(page).to have_content("Recent Stops")
+              expect(page).to have_link("147 Outer Drive Express, Northbound, Michigan & Huron")
+            end
+
+            it 'only remembers 6 recent stops and removes the least recently used' do
+              pending
+            end
+
+            it 'only remembers unique recent stops' do
+              pending
+            end
+
+            it 'moves the most recent stop to the first position' do
+              pending
+            end
+          end
         end
       end
     end
