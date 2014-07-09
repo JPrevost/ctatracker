@@ -1,5 +1,5 @@
 {<img src="https://travis-ci.org/JPrevost/ctatracker.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/JPrevost/ctatracker]
-
+{<img src="https://coveralls.io/repos/JPrevost/ctatracker/badge.png" alt="Coverage Status" />}[https://coveralls.io/r/JPrevost/ctatracker]
 == Welcome to CTATracker
 
 This is primarily a demo app that uses the freely available CTA Bustracker API to allow users to see bus arrival predictions for specific routes and stops. It uses data provided by the CTA, and thus is as accurate (or inaccurate) as the provided data.
