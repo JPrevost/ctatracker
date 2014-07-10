@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.4'
 gem 'nokogiri'
 gem 'newrelic_rpm'
-gem 'bootstrap-sass', '~> 3.1.1'
+gem 'bootstrap-sass', '~> 3.2.0'
 gem 'coveralls', require: false
 
 group :development do
@@ -27,7 +27,7 @@ end
 
 # Gems used only for assets and not required
 # in production environments by default.
-gem 'sass-rails', github: 'rails/sass-rails'
+gem 'sass-rails', '>= 3.2'
 gem 'uglifier'
 
 gem 'jquery-rails'
