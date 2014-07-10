@@ -4,6 +4,7 @@ gem 'rails', '4.1.1'
 gem 'nokogiri'
 gem 'newrelic_rpm'
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'coveralls', require: false
 
 group :development do
   gem 'sqlite3'
@@ -20,8 +21,8 @@ end
 
 group :test do
   gem 'capybara'
-  gem "vcr"
-  gem "webmock"
+  gem 'vcr'
+  gem 'webmock'
 end
 
 # Gems used only for assets and not required
@@ -32,7 +33,7 @@ gem 'uglifier'
 gem 'jquery-rails'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+# gem 'bcrypt'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
