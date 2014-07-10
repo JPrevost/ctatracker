@@ -2,6 +2,18 @@
   <li class="active">Choose a Route</li>
 </ol>
 
+<% if cookies[:recent_stops] %>
+  <ul class="list-group">
+  Recent Stops:
+    <% ActiveSupport::JSON.decode(cookies[:recent_stops]).each do |c| %>
+    <li class="list-group-item">
+      <%= link_to("#{c['route']} #{c['route_name']}, #{c['dir']}, #{c['stpnm']}",
+      buspredictions_path( c['route'], c['route_name'], c['dir'], c['stopid'], c['stpnm'] )) %>
+    </li>
+    <% end %>
+  </ul>
+<% end %>
+
 <ul class="list-group">
   <% @busroutes.each do |l| %>
     <li class="list-group-item">
