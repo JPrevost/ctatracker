@@ -1,10 +1,6 @@
 require 'spec_helper'
 
 describe Bustime, :vcr do
-  it "should have access to the API key" do
-    expect(ENV['CTA_API_KEY']).to be_present
-  end
-
   describe "busroutes" do
     before { @busroutes = Bustime.new.busroutes }
 
