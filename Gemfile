@@ -4,6 +4,7 @@ gem 'rails', '4.1.4'
 gem 'nokogiri'
 gem 'newrelic_rpm'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'autoprefixer-rails'
 gem 'coveralls', require: false
 
 group :development do
