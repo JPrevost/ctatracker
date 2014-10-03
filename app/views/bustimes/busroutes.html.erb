@@ -3,10 +3,10 @@
 </ol>
 
 <% if cookies[:recent_stops] %>
-  <ul class="list-group">
+  <ul id='recent_stops' class="list-group">
   Recent Stops:
     <% ActiveSupport::JSON.decode(cookies[:recent_stops]).each do |c| %>
-    <li class="list-group-item">
+    <li class='list-group-item'>
       <%= link_to("#{c['route']} #{c['route_name']}, #{c['dir']}, #{c['stpnm']}",
       buspredictions_path( c['route'], c['route_name'], c['dir'], c['stopid'], c['stpnm'] )) %>
     </li>
