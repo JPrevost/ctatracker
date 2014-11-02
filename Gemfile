@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.1.2'
-gem 'rails', '4.1.6'
+ruby '2.1.4'
+gem 'rails', '4.1.7'
 gem 'nokogiri'
 gem 'newrelic_rpm'
 gem 'bootstrap-sass', '~> 3.2.0'
