@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 ruby '2.2.0'
-gem 'rails', '4.1.7'
+gem 'rails', '4.2.0'
 gem 'nokogiri'
 gem 'newrelic_rpm'
-gem 'bootstrap-sass', '~> 3.2.0'
+gem 'bootstrap-sass', '~> 3.3.3'
 gem 'autoprefixer-rails'
 gem 'coveralls', require: false
 
@@ -28,7 +28,7 @@ group :test do
   gem 'webmock'
 end
 
-gem 'sass-rails', '>= 3.2'
+gem 'sass-rails'
 gem 'uglifier'
 gem 'jquery-rails'
 gem 'byebug'
