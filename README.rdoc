@@ -3,6 +3,8 @@
 {<img src="https://gemnasium.com/JPrevost/ctatracker.svg" alt="Dependency Status" />}[https://gemnasium.com/JPrevost/ctatracker]
 == Welcome to CTATracker
 
+{<img src="https://badges.gitter.im/Join%20Chat.svg" alt="Join the chat at https://gitter.im/JPrevost/ctatracker">}[https://gitter.im/JPrevost/ctatracker?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge]
+
 This is primarily a demo app that uses the freely available CTA Bustracker API to allow users to see bus arrival predictions for specific routes and stops. It uses data provided by the CTA, and thus is as accurate (or inaccurate) as the provided data.
 
 == Requirements
