@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
-ruby '2.2.3'
-gem 'rails', '4.2.5'
+ruby '2.3.1'
+gem 'rails', '4.2.6'
 gem 'nokogiri'
 gem 'newrelic_rpm'
 gem 'bootstrap-sass', '~> 3.3.3'
@@ -25,7 +25,7 @@ end
 group :test do
   gem 'capybara'
   gem 'vcr'
-  gem 'webmock'
+  gem 'webmock', '1.24.6'
 end
 
 gem 'sass-rails'
