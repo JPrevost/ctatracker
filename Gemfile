@@ -1,11 +1,12 @@
 source 'https://rubygems.org'
 ruby '2.3.1'
-gem 'rails', '4.2.6'
+gem 'rails', '5.0.0'
 gem 'nokogiri'
 gem 'newrelic_rpm'
-gem 'bootstrap-sass', '~> 3.3.3'
+gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
 gem 'coveralls', require: false
+gem 'puma'
 
 group :development do
   gem 'sqlite3'
