@@ -19,3 +19,5 @@
 
 # Ignore local env var loader
 config/heroku_env.rb
+
+.env
